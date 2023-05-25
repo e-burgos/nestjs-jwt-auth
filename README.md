@@ -62,11 +62,14 @@ $ npm run test:cov
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
+## Deploy on Vercel
+
+[Check it!](https://levelup.gitconnected.com/how-to-deploy-your-nestjs-apps-on-vercel-3431b9f2b4c6).
+
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- Author - [Esteban Burgos](https://github.com/e-burgos)
+- Website - [https://www.estebanburgos.com.ar](https://www.estebanburgos.com.ar)
 
 ## License
 

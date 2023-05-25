@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
@@ -5,7 +6,7 @@ import { AxiosError } from 'axios';
 import { Model } from 'mongoose';
 import { catchError, firstValueFrom } from 'rxjs';
 import { User } from './user.model';
-import * as FormData from 'form-data';
+const FormData = require('form-data');
 
 @Injectable()
 export class UsersService {
@@ -47,8 +48,6 @@ export class UsersService {
     if (!user) {
       throw 'User not found';
     }
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    //@ts-ignore
     const formData = new FormData();
     formData.append('image', avatar.buffer.toString('base64'));
     const { data: imageData } = await firstValueFrom(
