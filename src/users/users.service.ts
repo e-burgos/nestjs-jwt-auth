@@ -47,6 +47,8 @@ export class UsersService {
     if (!user) {
       throw 'User not found';
     }
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    //@ts-ignore
     const formData = new FormData();
     formData.append('image', avatar.buffer.toString('base64'));
     const { data: imageData } = await firstValueFrom(
