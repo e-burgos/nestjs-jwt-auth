@@ -1,4 +1,5 @@
 import { NestFactory } from '@nestjs/core';
+import cors from 'cors';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 
@@ -13,14 +14,7 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, options);
 
   // Api path
-  SwaggerModule.setup('', app, document, {
-    swaggerOptions: {
-      defaultModelRendering: 'model', // Show "Schema" instead of "Example Value" by default
-    },
-  });
-
-  // // Swagger
-  // app.use(express.static(pathToSwaggerUi));
+  SwaggerModule.setup('api', app, document);
 
   await app.listen(5019);
 }
